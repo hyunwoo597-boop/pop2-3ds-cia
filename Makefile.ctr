@@ -301,7 +301,7 @@ $(TARGET).smdh    : $(APP_ICON)
 
 %_bgr.h %.bgr.o: %.bgr
 	@echo $(notdir $<)
-	@$(TOOLDIR)/bin2s -a 4 -H `(echo $(<)) | tr . _)`.h $< | $(AS) -o $(<).o
+	@$(TOOLDIR)/bin2s -a 4 -H $(patsubst %.bgr,%_bgr.h,$<) $< | $(AS) -o $(<).o
 	
 #---------------------------------------------------------------------------------
 

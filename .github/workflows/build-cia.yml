@@ -18,7 +18,7 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
-          make -f Makefile.ctr -j2
+          make -f Makefile.ctr -j1
           test -f prince-of-persia-2.cia
 
       - name: Upload build outputs

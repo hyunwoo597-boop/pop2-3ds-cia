@@ -18,6 +18,8 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
+          apt-get update
+          apt-get install -y --no-install-recommends ffmpeg
           make -f Makefile.ctr -j1
           test -f prince-of-persia-2.cia
 

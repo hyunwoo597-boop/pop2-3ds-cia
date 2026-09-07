@@ -1,0 +1,10 @@
+Prince of Persia 2 / 페르시아의 왕자 2 - build package
+
+Expected output: prince-of-persia-2.cia
+
+Official devkitPro Docker build:
+  ./build_in_devkitpro_docker.sh
+
+GitHub Actions:
+  .github/workflows/build-cia.yml builds with devkitpro/devkitarm:latest
+  and uploads the CIA as a workflow artifact.
